@@ -26,3 +26,28 @@ The inputs to the Captain's network are the cumulative observations of individua
 
 <p align="center">
 <img width="605" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/9e0c4c7e-8276-4a13-9977-31a956574767">
+
+## Results
+To implement the Captain, we use methods such as QMIX and IQL. In SMAC, the default field of view is set to 9. The actions defined for a Captain are as follows:
+- Increase field of view to 12
+- Keep field of view constant at 9
+- Decrease field of view to 6
+
+Please note that the shoot range for individuals is a constant value of 6.
+
+For the implementation of our method, we place the map in the 5m model. We run the game three times for each algorithm, each time for 5x10^5 steps. We halt training every 25x10^3 steps and run the game 100 times. We calculate the win rate in these 100 games and then continue training. We ensure the exploration-exploitation balance by controlling ε, which changes from 1 to 0.05 after 10^5 steps.
+
+For evaluating our method, we consider two criteria. The first criterion is the win rate, which represents the percentage of victories in the games played. The second criterion examines the actions selected by the Captain. This criterion shows us whether our method was able to achieve a high win rate with an appropriate sight range or not.
+
+<img width="307" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/803b9e88-60ae-49d5-a21f-52d423163b24">
+
+As we can observe, when the map is in the 5m mode, agents achieve a significantly lower win rate when their sight range is set to 6 compared to other configurations. The remaining configurations have approximately similar win rates. Therefore, to investigate each case, we need to examine the sight range at which these win rates were achieved. A lower field of view indicates that the Captain has learned to adjust the field of view at the right time.
+
+<img width="279" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/8df632bc-75d5-46f2-a19a-bf658aaa8dac">
+
+<img width="265" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/4d672224-6ebb-4ce9-9674-8cd46738db57">
+
+<img width="277" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/2aad8028-775f-483b-8610-d832e15eac51">
+
+In the above charts, we can observe the selected sight ranges for each of the agents. As we can see, IQL couldn't achieve the desired results like QMIX and IQL with parameter sharing. In these two cases, the Captain(s) managed to perform well with a sight range very close to 6, which is similar to the performance with a sight range of 12. This is a very positive outcome.
+
