@@ -38,6 +38,7 @@ Please note that the shoot range for individuals is a constant value of 6.
 For the implementation of our method, we place the map in the 5m model. We run the game three times for each algorithm, each time for 5x10^5 steps. We halt training every 25x10^3 steps and run the game 100 times. We calculate the win rate in these 100 games and then continue training. We ensure the exploration-exploitation balance by controlling ε, which changes from 1 to 0.05 after 10^5 steps.
 
 For evaluating our method, we consider two criteria. The first criterion is the win rate, which represents the percentage of victories in the games played. The second criterion examines the actions selected by the Captain. This criterion shows us whether our method was able to achieve a high win rate with an appropriate sight range or not.
+<p align="center">
 
 <img width="307" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/803b9e88-60ae-49d5-a21f-52d423163b24">
 
