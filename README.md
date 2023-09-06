@@ -25,4 +25,4 @@ In which r represents the shared reward among the agents. The second part of the
 The inputs to the Captain's network are the cumulative observations of individual agents concatenated together. The Captain, upon receiving observations from the agents, selects an appropriate field of view for each of the agents. Then, the agents, based on their new observations, find the optimal action using the QMIX algorithm and receive corresponding rewards. Using these rewards, the learning parameters of both the agents (QMIX) and the Captain are updated. This cycle continues until the end of the game.
 
 <p align="center">
-![shceme](https://github.com/bizhii2000/Attention-Learning/assets/109950718/09e8a7ca-bcf2-4d51-a6a4-0d8d597859d1)
+<img width="605" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/9e0c4c7e-8276-4a13-9977-31a956574767">
