@@ -20,3 +20,9 @@ In our proposed method, we introduce an agent named the Captain. This Captain le
 <p align="center">
 <img width="289" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/32aee674-b4f2-453e-94f8-a1dc9c8b8804">
 
+In which r represents the shared reward among the agents. The second part of the reward is defined in a way that if the Captain increases the agents' FOV, they receive a negative reward, and if the Captain reduces the agents' FOV, they receive a positive reward. α is also used to balance the two rewards.
+
+The inputs to the Captain's network are the cumulative observations of individual agents concatenated together. The Captain, upon receiving observations from the agents, selects an appropriate field of view for each of the agents. Then, the agents, based on their new observations, find the optimal action using the QMIX algorithm and receive corresponding rewards. Using these rewards, the learning parameters of both the agents (QMIX) and the Captain are updated. This cycle continues until the end of the game.
+
+<p align="center">
+![image](https://github.com/bizhii2000/Attention-Learning/assets/109950718/b95fb3fe-d077-4bb4-9363-5711c9083c17)
