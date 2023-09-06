@@ -11,3 +11,9 @@ In this project, we demonstrate that incorporating an additional agent with the 
 To test our results and methodologies, we employ a popular MARL environment named "Starcraft II," which features a series of mini-maps, highly suited for evaluating multi-agent reinforcement learning algorithms.
 
 ## Proposed Method
+(note: this is just a very brief summary)
+
+Many multi-agent reinforcement learning methods control the agents in a manner akin to coaching. This means that they train the agents by taking into account the observations of all the agents. One of these algorithms is QMIX, a centralized multi-agent reinforcement learning algorithm. QMIX and other MARL algorithms assume that the size of the agents' observations is fixed. In this project, we introduce a new method for modifying the agents' observations to enhance the speed and efficiency of learning. One influential factor in these observations is the agents' attention. One of the outcomes of attention is the agents' field of view (FOV).
+
+In our proposed method, we introduce an agent named the Captain. This Captain learns during the training process how to adjust the field of view in the environment at the right time to improve the speed and quality of learning. Changing the field of view incurs a cost for the Captain. We define the Captain's reward as follows:
+
