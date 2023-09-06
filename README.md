@@ -17,6 +17,6 @@ Many multi-agent reinforcement learning methods control the agents in a manner a
 
 In our proposed method, we introduce an agent named the Captain. This Captain learns during the training process how to adjust the field of view in the environment at the right time to improve the speed and quality of learning. Changing the field of view incurs a cost for the Captain. We define the Captain's reward as follows:
 
-
+<p align="center">
 <img width="289" alt="image" src="https://github.com/bizhii2000/Attention-Learning/assets/109950718/32aee674-b4f2-453e-94f8-a1dc9c8b8804">
 
